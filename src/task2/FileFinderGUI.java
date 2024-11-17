@@ -17,7 +17,7 @@ class FileFinderGUI {
     private String directoryPath;
 
     public void createAndShowGUI() {
-        frame = new JFrame("Пошук великих файлів");
+        frame = new JFrame("Пошук великих файлів в директорії.");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 300);
         frame.setLayout(new BorderLayout());
@@ -68,7 +68,7 @@ class FileFinderGUI {
                 if (returnValue == JFileChooser.APPROVE_OPTION) {
                     File selectedDirectory = fileChooser.getSelectedFile();
                     directoryPath = selectedDirectory.getPath();
-                    directoryLabel.setText(directoryPath);  // Відображаємо вибрану директорію
+                    directoryLabel.setText(directoryPath);
                 }
             }
         });
